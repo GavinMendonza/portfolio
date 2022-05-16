@@ -172,15 +172,29 @@ main .button{
     max-width: 1200px;
     margin: 0 auto;
 }
+
 @media screen and (min-width: 480px) {
     .container {
         padding: 2em;
         }
   }
 @media screen and (max-width: 900px) {
-img {
+.gridImg {
     display: none;
     }
+.gridItem{
+    margin-top: 0.2em;
+    margin-bottom: 5em;   
+}
+.bgForMobile{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(2,211,248,1);
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(100% 0, 100% 33%, 0 100%, 0 65%);
+
+}
 }
 
 footer{
