@@ -1,7 +1,7 @@
 body{
     margin: 0;
     /* background-color: #eae7dc; */
-    font-family: "Open Sans",'quicksand', sans-serif;
+    font-family: "Roboto Flex","Open Sans",'quicksand', sans-serif;
 }
 /* 
 .left-margin-adder{
@@ -9,7 +9,9 @@ body{
 } */
 
 .main-mini-heading{
+    font-size: 2em;
     margin-top: 1.3em;
+    margin-bottom: 0px;
     animation: fadeIn linear .6s;
 }
 main .main-heading{
@@ -19,6 +21,17 @@ main .main-heading{
 main .main-para{
     animation: fadeIn linear 1.8s;
 }
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flexItem{
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
 
 .grid{
     /* display: grid;
@@ -32,9 +45,11 @@ main .main-para{
 }
 .gridItem{
     flex: 1 1 300px;
-    margin: 50px;    
+    margin: 50px;
 }
-
+.firstHalf{
+    flex-basis: 20%;
+}
 .button{
     animation: fadeIn linear 2.4s;
 }
@@ -53,7 +68,7 @@ main .main-para{
 .navbar-brand{
     margin-left: 2vw;
     /* font-size: 2em; */
-    font-size: clamp(1em, 3vw, 24px);
+    font-size: clamp(2em, 3vw, 24px);
 }
 
 .navbar-nav{
@@ -113,18 +128,20 @@ main{
     font-size: 20px;
     margin-top: 4em;
 }
-main img{
+.gridImg{
     max-width: 100%;
     /*  */
     margin-top: 2.3em;
     width: 110%;
 }
 .main-heading{
-    font-size: 3em;
+    font-size: clamp(3em,9vw,4em);
 }
 
 main .main-para{
-    margin-bottom: 50px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 main .button{
     text-decoration: none;
@@ -142,10 +159,45 @@ main .button{
     box-shadow: 5px 5px 2px 0  rgb(0, 0, 0,0.5);
 }
 
-.workSection{
-    background-color: rgba(105, 105, 105,0.2);
-    border-radius: 2em;
+/* work css starts here */
+.workSection1{
+    width: 40%;
 }
+.workHeading{
+    font-size: 3em;
+    font-weight: 550;
+    /* color: #ff5925; */
+    border-left: solid 0.2em #ff5925;
+    padding-left: 0.3em;
+    margin-bottom: 0.6em;
+}
+.workSubheading{
+    padding-left: 1.7em;
+    opacity: 0.6;
+}
+
+.workDescription p{
+    font-size: 1.4em;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+.outputOuterContainer{
+    display: grid;
+    place-items: center;
+}
+.output{
+    max-width: 80%;
+    background-color: #2a2a2a;
+    box-shadow: 1px 1px 5px 2px #626262;
+    padding: 7px;
+    border-radius: 1em;
+}
+.output img{
+    max-width: 100%;
+    border-radius: 1em;
+}
+
+/* work css ends here */
 
 .contact{
     margin-top: 3.5em;
@@ -170,7 +222,9 @@ main .button{
 
 .container{
     max-width: 1200px;
-    margin: 0 auto;
+    margin-right: 0em;
+    padding-right: 0em;
+    /* margin: 0 auto; */
 }
 
 @media screen and (min-width: 480px) {
@@ -179,12 +233,33 @@ main .button{
         }
   }
 @media screen and (max-width: 900px) {
-.gridImg {
+.contact .button{
+    display: block;
+}
+/* .gridImg {
     display: none;
+    } */
+
+    .grid{
+        margin-top: 5em;
     }
-.gridItem{
-    margin-top: 0.2em;
-    margin-bottom: 5em;   
+    .main-mini-heading{
+        margin-top: 0px;
+    }
+    .work .grid{
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+
+    .work .gridItem{
+        margin: 0px;
+        margin-left: 50px;
+        /* margin-top: 50px; */
+        margin-bottom: 0em;
+    }
+    .workDescription{
+        padding-left: 1.7em;
+    }
 }
 .bgForMobile{
     height: 100%;
@@ -194,7 +269,6 @@ main .button{
     z-index: -1;
     clip-path: polygon(100% 0, 100% 33%, 0 100%, 0 65%);
 
-}
 }
 
 footer{
