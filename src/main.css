@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding-right: 0.5em;
     /* background-color: #eae7dc; */
     font-family: "Roboto Flex","Open Sans",'quicksand', sans-serif;
 }
@@ -62,6 +63,8 @@ main .main-para{
 .navbar{
     /* background-color: #eae7dc; */
     background-color: white;
+    max-width: 100%;
+    /* display: none; */
     /* box-shadow: 0 0 5px rgb(0, 0, 0,0.5); */
 }
 
@@ -153,6 +156,7 @@ main .button{
 
 }
 
+
 .button:hover{
     background-color: black;
     color: white; 
@@ -207,10 +211,12 @@ main .button{
     margin-bottom: 0.5em;
 }
 .gridForContact{
-    display: grid;
-    max-width: min(480px,30%);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: min(480px,50%);
     grid-template-columns: auto auto auto auto;
     font-size: 18px;
+    /* display: none; */
 }
 
 
@@ -233,16 +239,20 @@ main .button{
         }
   }
 @media screen and (max-width: 900px) {
-.contact .button{
+/* .contact .button{
     display: block;
+} */
+.contact .button{
+    border: none;
+    font-weight: 700;
 }
 /* .gridImg {
     display: none;
     } */
 
-    .grid{
+    /* .grid{
         margin-top: 5em;
-    }
+    } */
     .main-mini-heading{
         margin-top: 0px;
     }
