@@ -71,7 +71,7 @@ main .main-para{
 .navbar-brand{
     margin-left: 2vw;
     /* font-size: 2em; */
-    font-size: clamp(2em, 3vw, 24px);
+    font-size: clamp(1.7em, 3vw, 24px);
 }
 
 .navbar-nav{
@@ -136,6 +136,7 @@ main{
     /*  */
     margin-top: 2.3em;
     width: 110%;
+    /* margin-top: 0em; */
 }
 .main-heading{
     font-size: clamp(3em,9vw,4em);
@@ -242,6 +243,10 @@ main .button{
 /* .contact .button{
     display: block;
 } */
+.gridImg{
+    margin-top: 0px;
+}
+
 .contact .button{
     border: none;
     font-weight: 700;
